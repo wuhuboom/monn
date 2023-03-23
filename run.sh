@@ -6,7 +6,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
 #这里可替换为你自己的执行程序，其他代码无需更改
 
-APP_NAME=/www/wwwroot/takeOff/ball_web_jar/ball_web.jar
+APP_NAME=/www/wwwroot/monn/ball_web_jar/ball_moon_web.jar
 
 #使用说明，用来提示输入参数
 usage() {
@@ -31,7 +31,7 @@ start(){
   if [ $? -eq 0 ]; then
     echo "${APP_NAME} is already running. pid=${pid}"
   else
-    nohup java -jar ${APP_NAME} --spring.config.location=/www/wwwroot/takeOff/application.yml  >> bootlog.out 2>&1 &
+    nohup java -jar ${APP_NAME} --spring.config.location=/www/wwwroot/monn/application.yml  >> bootlog.out 2>&1 &
   fi
 }
 
